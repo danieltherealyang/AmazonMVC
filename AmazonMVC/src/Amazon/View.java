@@ -10,6 +10,8 @@ import Amazon.Components.*;
 
 public class View extends JPanel {
 	//Components
+	private Model m_model;
+	private JFrame m_frame;
 	Buttons myButtons = new Buttons();
 	ProductPanels myPanels = new ProductPanels();
 	private JButton Logo = myButtons.AmazonLogo();
@@ -20,7 +22,7 @@ public class View extends JPanel {
 	private JButton NewReleases = myButtons.NewReleases();
 	private JButton Books = myButtons.Books();
 	private JButton BestSellers = myButtons.BestSellers();
-	private JTextField SearchBar = new JTextField(70);
+	private JTextField SearchBar = new JTextField(65);
 	private JButton SearchButton = new JButton();
 	private JLabel SearchLabel = new JLabel("Search");
 	private JPanel panel = new JPanel() {
@@ -33,8 +35,7 @@ public class View extends JPanel {
 	};
 	private JPanel ProductPanel;
 	private JScrollPane scrollPane;
-	private Model m_model;
-	private JFrame m_frame;
+	
 
 	View(Model model, JFrame frame) {
 		m_model = model;
