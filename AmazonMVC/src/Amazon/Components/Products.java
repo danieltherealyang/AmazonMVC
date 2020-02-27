@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class Products {
-    public JPanel Tyler1Shirt() {
+    public JPanel Tyler1Shirt(ActionListener buttonListener) {
         JPanel Tyler1Shirt = new JPanel();
         Tyler1Shirt.setSize(300, 300);
         JButton Shirt = new JButton();
@@ -14,6 +14,7 @@ public class Products {
         Image scaled = image.getScaledInstance(200, 210, java.awt.Image.SCALE_SMOOTH);
         shirtPic = new ImageIcon(scaled);
         Shirt.setIcon(shirtPic);
+        Shirt.addActionListener(buttonListener);
 
         JLabel Description = new JLabel("TYLER1 Trademark Alpha Shirt");
         JLabel Price = new JLabel("$20.00");
@@ -23,6 +24,42 @@ public class Products {
         Tyler1Shirt.add(Price);
         Tyler1Shirt.setBorder(BorderFactory.createLineBorder(Color.black));
         return Tyler1Shirt;
+    }
+    
+    public JPanel Tyler1ShirtDescription(ActionListener Back) {
+    	JPanel Tyler1ShirtDescription = new JPanel();
+    	Tyler1ShirtDescription.setSize(1000, 880);
+    	
+    	JLabel Shirt = new JLabel();
+    	ImageIcon shirtPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1_Shirt.jpg"));
+        Image image = shirtPic.getImage();
+        Image scaled = image.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH);
+        shirtPic = new ImageIcon(scaled);
+        Shirt.setIcon(shirtPic);
+        
+        JLabel ProductName = new JLabel("TYLER1 Trademark Alpha Shirt");
+        JLabel ProductSize = new JLabel("Size: Adult Large");
+        JLabel ProductCondition = new JLabel("Condition: 100% New");
+        JLabel P1 = new JLabel("Machine Wash");
+        JLabel P2 = new JLabel("No Tag");
+        JLabel P3 = new JLabel("Guaranteed to make you alpha");
+        JLabel Price = new JLabel("$20.00");
+        JButton goBack = new JButton("Go Back");
+        goBack.addActionListener(Back);
+        
+        Tyler1ShirtDescription.setLayout(new BoxLayout(Tyler1ShirtDescription,BoxLayout.Y_AXIS));
+        Tyler1ShirtDescription.add(ProductName);
+        Tyler1ShirtDescription.add(Shirt);
+        Tyler1ShirtDescription.add(ProductSize);
+        Tyler1ShirtDescription.add(ProductCondition);
+        Tyler1ShirtDescription.add(P1);
+        Tyler1ShirtDescription.add(P2);
+        Tyler1ShirtDescription.add(P3);
+        Tyler1ShirtDescription.add(Price);
+        Tyler1ShirtDescription.add(goBack);
+        
+        Tyler1ShirtDescription.setBorder(BorderFactory.createLineBorder(Color.black));
+        return Tyler1ShirtDescription;
     }
 
     public JPanel Tyler1Mug() {

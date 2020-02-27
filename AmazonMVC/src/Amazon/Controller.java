@@ -3,10 +3,13 @@ package Amazon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import Amazon.Components.ProductPanels;
+
 public class Controller {
     private Model m_model;
     private View m_view;
-
+    ProductPanels myPanels = new ProductPanels();
+    
     Controller(Model model, View view) {
         m_model = model;
         m_view = view;
@@ -24,7 +27,7 @@ public class Controller {
 
     class LogoListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.AllProducts());
         }
     }
 

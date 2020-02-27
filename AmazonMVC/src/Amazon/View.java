@@ -57,8 +57,10 @@ public class View extends JPanel {
 			}
 		});
 		ProductPanel = myPanels.AllProducts();
+		
 		scrollPane = new JScrollPane(ProductPanel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setPreferredSize(new Dimension(1000,880));
+		
 		panel.setPreferredSize(new Dimension(1000,1000));
 		panel.add(Logo, BorderLayout.NORTH);
 		panel.add(SearchLabel);
@@ -78,6 +80,15 @@ public class View extends JPanel {
 		m_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		m_frame.getContentPane().add(panel);
 		m_frame.pack();
+	}
+	
+	void showScrollPane(JPanel Panel) {
+		panel.remove(scrollPane);
+		scrollPane = new JScrollPane(Panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setPreferredSize(new Dimension(1000,880));
+		panel.add(scrollPane, BorderLayout.SOUTH);
+		panel.validate();
+		panel.repaint();
 	}
 
 	void addLogoListener(ActionListener logoListener) {
