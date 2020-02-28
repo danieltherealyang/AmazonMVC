@@ -1,11 +1,15 @@
 package Amazon.Components;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class Products {
-    public JPanel Tyler1Shirt(ActionListener buttonListener) {
+   
+	Consumer t = new Consumer();
+	
+	public JPanel Tyler1Shirt(ActionListener buttonListener) {
         JPanel Tyler1Shirt = new JPanel();
         Tyler1Shirt.setSize(300, 300);
         JButton Shirt = new JButton();
@@ -27,6 +31,7 @@ public class Products {
     }
     
     public JPanel Tyler1ShirtDescription(ActionListener Back) {
+    	Consumer[] arr = t.Consumerdata();
     	JPanel Tyler1ShirtDescription = new JPanel();
     	Tyler1ShirtDescription.setSize(1000, 880);
     	
@@ -37,13 +42,13 @@ public class Products {
         shirtPic = new ImageIcon(scaled);
         Shirt.setIcon(shirtPic);
         
-        JLabel ProductName = new JLabel("TYLER1 Trademark Alpha Shirt");
-        JLabel ProductSize = new JLabel("Size: Adult Large");
-        JLabel ProductCondition = new JLabel("Condition: 100% New");
-        JLabel P1 = new JLabel("Machine Wash");
-        JLabel P2 = new JLabel("No Tag");
-        JLabel P3 = new JLabel("Guaranteed to make you alpha");
-        JLabel Price = new JLabel("$20.00");
+        JLabel ProductName = new JLabel(arr[0].ctitle);
+        JLabel ProductSize = new JLabel("null");
+        JLabel ProductCondition = new JLabel("array here disc");
+        JLabel P1 = new JLabel("Null");
+        JLabel P2 = new JLabel("Null");
+        JLabel P3 = new JLabel("tarrif here araay");
+        JLabel Price = new JLabel("price here array");
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
         
