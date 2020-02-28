@@ -41,16 +41,7 @@ public class Products {
         Image scaled = image.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH);
         shirtPic = new ImageIcon(scaled);
         Shirt.setIcon(shirtPic);
-        
-<<<<<<< HEAD
-        JLabel ProductName = new JLabel("TYLER1 Trademark Alpha Shirt");
-        JLabel ProductSize = new JLabel("Size: Adult Large");
-        JLabel ProductCondition = new JLabel("Condition: 100% New");
-        JLabel P1 = new JLabel("Machine Washable");
-        JLabel P2 = new JLabel("No Tag");
-        JLabel P3 = new JLabel("Guaranteed to make you alpha");
-        JLabel Price = new JLabel("$20.00");
-=======
+       
         JLabel ProductName = new JLabel(arr[0].ctitle);
         JLabel ProductSize = new JLabel("null");
         JLabel ProductCondition = new JLabel("array here disc");
@@ -58,7 +49,6 @@ public class Products {
         JLabel P2 = new JLabel("Null");
         JLabel P3 = new JLabel("tarrif here araay");
         JLabel Price = new JLabel("price here array");
->>>>>>> branch 'master' of https://github.com/loltyler1dotcom-discount-code-alpha/AmazonMVC.git
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
         
