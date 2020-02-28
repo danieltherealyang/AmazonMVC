@@ -8,10 +8,10 @@ public class Consumer
 {
 	public String ctitle;
 	public String cdescript;
-	public int cprice;
-	public int ctarrif;
+	public String cprice;
+	public String ctarrif;
 	
-	public Consumer(String title, String descript, int price, int tarrif)
+	public Consumer(String title, String descript, String price, String tarrif)
 	{
 		ctitle=title;
 		cdescript=descript;
@@ -34,7 +34,7 @@ public class Consumer
 	public static Consumer[] Consumerdata()
 	{
 		Consumer[] con= {
-				new Consumer("TYLER1 Trademark Alpha Shirt","highest quality TYler1 brandend shirt, availbe in all sizes",10, 20)
+				new Consumer("Title: TYLER1 Trademark Alpha Shirt","Description :highest quality TYLER1 brandend shirt, all sizes. Made in Wuhan, best bats","Tarriff:10", "Price:20")
 				
 				
 				

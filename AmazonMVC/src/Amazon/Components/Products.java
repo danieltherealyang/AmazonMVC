@@ -43,22 +43,20 @@ public class Products {
         Shirt.setIcon(shirtPic);
        
         JLabel ProductName = new JLabel(arr[0].ctitle);
-        JLabel ProductSize = new JLabel("null");
-        JLabel ProductCondition = new JLabel("array here disc");
-        JLabel P1 = new JLabel("Null");
-        JLabel P2 = new JLabel("Null");
-        JLabel P3 = new JLabel("tarrif here araay");
-        JLabel Price = new JLabel("price here array");
+        //JLabel ProductSize = new JLabel("null");
+        JLabel ProductCondition = new JLabel(arr[0].cdescript);
+        
+        JLabel P3 = new JLabel(arr[0].ctarrif);
+        JLabel Price = new JLabel(arr[0].cprice);
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
         
         Tyler1ShirtDescription.setLayout(new BoxLayout(Tyler1ShirtDescription,BoxLayout.Y_AXIS));
         Tyler1ShirtDescription.add(ProductName);
         Tyler1ShirtDescription.add(Shirt);
-        Tyler1ShirtDescription.add(ProductSize);
+        //Tyler1ShirtDescription.add(ProductSize);
         Tyler1ShirtDescription.add(ProductCondition);
-        Tyler1ShirtDescription.add(P1);
-        Tyler1ShirtDescription.add(P2);
+       
         Tyler1ShirtDescription.add(P3);
         Tyler1ShirtDescription.add(Price);
         Tyler1ShirtDescription.add(goBack);
@@ -178,7 +176,42 @@ public class Products {
         Tyler1BloodRushDescription.setBorder(BorderFactory.createLineBorder(Color.black));
         return Tyler1BloodRushDescription;
     }
-    
+    /*
+    public JPanel general(ActionListener Back) {
+    	Consumer[] arr = t.Consumerdata();
+    	JPanel Tyler1ShirtDescription = new JPanel();
+    	Tyler1ShirtDescription.setSize(1000, 880);
+    	
+    	JLabel Shirt = new JLabel();
+    	ImageIcon shirtPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1_Shirt.jpg"));
+        Image image = shirtPic.getImage();
+        Image scaled = image.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH);
+        shirtPic = new ImageIcon(scaled);
+        Shirt.setIcon(shirtPic);
+       
+        JLabel ProductName = new JLabel(arr[0].ctitle);
+        //JLabel ProductSize = new JLabel("null");
+        JLabel ProductCondition = new JLabel(arr[0].cdescript);
+        
+        JLabel P3 = new JLabel(arr[0].ctarrif);
+        JLabel Price = new JLabel(arr[0].cprice);
+        JButton goBack = new JButton("Go Back");
+        goBack.addActionListener(Back);
+        
+        //generalTyler1ShirtDescription.setLayout(new BoxLayout(Tyler1ShirtDescription,BoxLayout.Y_AXIS));
+        Tyler1ShirtDescription.add(ProductName);
+        Tyler1ShirtDescription.add(Shirt);
+        //Tyler1ShirtDescription.add(ProductSize);
+        Tyler1ShirtDescription.add(ProductCondition);
+       
+        Tyler1ShirtDescription.add(P3);
+        Tyler1ShirtDescription.add(Price);
+        Tyler1ShirtDescription.add(goBack);
+        
+        Tyler1ShirtDescription.setBorder(BorderFactory.createLineBorder(Color.black));
+        return Tyler1ShirtDescription;
+    }
+   */ 
     public JPanel getProduct(ActionListener ButtonListener, String picPath, String description, String price) {
     	JPanel product = new JPanel();
     	product.setSize(300, 300);
