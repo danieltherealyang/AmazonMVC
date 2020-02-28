@@ -21,9 +21,17 @@ public class ProductPanels {
         		cardLayout.show(AllProductsPanel, "shirt");
         	}
         }));
+        mainCard.add(products.Tyler1Mug(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(AllProductsPanel, "mug");
+        	}
+        }));
         
-        mainCard.add(products.Tyler1Mug());
-        mainCard.add(products.Tyler1BloodRush());
+        mainCard.add(products.Tyler1BloodRush(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(AllProductsPanel, "bloodrush");
+        	}
+        }));
         
         JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
@@ -31,8 +39,22 @@ public class ProductPanels {
         	}
         });
         
+        JPanel Tyler1MugDescription = products.Tyler1MugDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(AllProductsPanel, "main");
+        	}
+        });
+        
+        JPanel Tyler1BloodRushDescription = products.Tyler1BloodRushDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(AllProductsPanel, "main");
+        	}
+        });
+        
         AllProductsPanel.add(mainCard, "main");
         AllProductsPanel.add(Tyler1ShirtDescription, "shirt");
+        AllProductsPanel.add(Tyler1MugDescription, "mug");
+        AllProductsPanel.add(Tyler1BloodRushDescription, "bloodrush");
         cardLayout.show(AllProductsPanel, "main");
         return AllProductsPanel;
     }
