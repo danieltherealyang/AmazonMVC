@@ -109,7 +109,7 @@ public class Products {
         JLabel Price = new JLabel(arr[1].cprice);
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
-        
+        //
         Tyler1MugDescription.setLayout(new BoxLayout(Tyler1MugDescription,BoxLayout.Y_AXIS));
         Tyler1MugDescription.add(ProductName);
         Tyler1MugDescription.add(Mug);
