@@ -124,7 +124,7 @@ public class Products {
         Tyler1MugDescription.setBorder(BorderFactory.createLineBorder(Color.black));
         return Tyler1MugDescription;
     }
-    
+      
     public JPanel Tyler1BloodRush(ActionListener buttonListener) {
     	JPanel Tyler1BloodRush = new JPanel();
     	Tyler1BloodRush.setSize(300,300);
@@ -179,6 +179,118 @@ public class Products {
         Tyler1BloodRushDescription.setBorder(BorderFactory.createLineBorder(Color.black));
         return Tyler1BloodRushDescription;
     }
+    
+    public JPanel Tyler1Bag(ActionListener buttonListener) {
+    	JPanel Tyler1Bag = new JPanel();
+    	Tyler1Bag.setSize(300,300);
+    	JButton Bag = new JButton();
+    	ImageIcon BagPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1Bag.jpg"));
+    	Image image = BagPic.getImage();
+    	Image scaled = image.getScaledInstance(200, 210, java.awt.Image.SCALE_SMOOTH);
+    	BagPic = new ImageIcon(scaled);
+    	Bag.setIcon(BagPic);
+    	Bag.addActionListener(buttonListener);
+    	
+    	JLabel Description = new JLabel("loltyler1 Bag");
+    	JLabel Price = new JLabel("$10.00");
+    	Tyler1Bag.setLayout(new BoxLayout(Tyler1Bag, BoxLayout.Y_AXIS));
+    	Tyler1Bag.add(Bag);
+    	Tyler1Bag.add(Description);
+    	Tyler1Bag.add(Price);
+    	Tyler1Bag.setBorder(BorderFactory.createLineBorder(Color.black));
+    	return Tyler1Bag;
+    }
+    
+    public JPanel Tyler1BagDescription(ActionListener Back) {
+    	JPanel Tyler1BagDescription = new JPanel();
+    	Tyler1BagDescription.setSize(1000, 880);
+    	
+    	JLabel Bag = new JLabel();
+    	ImageIcon BagPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1Bag.jpg"));
+        Image image = BagPic.getImage();
+        Image scaled = image.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH);
+        BagPic = new ImageIcon(scaled);
+        Bag.setIcon(BagPic);
+        
+        JLabel ProductName = new JLabel("loltyler1 Bag");
+        JLabel ProductSize = new JLabel("Size: Medium");
+        JLabel P1 = new JLabel("Holds items");
+        JLabel P2 = new JLabel("Stylish and affordable");
+        JLabel P3 = new JLabel("Comfortable to wear");
+        JLabel Price = new JLabel("$10.00");
+        JButton goBack = new JButton("Go Back");
+        goBack.addActionListener(Back);
+        
+        Tyler1BagDescription.setLayout(new BoxLayout(Tyler1BagDescription,BoxLayout.Y_AXIS));
+        Tyler1BagDescription.add(ProductName);
+        Tyler1BagDescription.add(Bag);
+        Tyler1BagDescription.add(ProductSize);
+        Tyler1BagDescription.add(P1);
+        Tyler1BagDescription.add(P2);
+        Tyler1BagDescription.add(P3);
+        Tyler1BagDescription.add(Price);
+        Tyler1BagDescription.add(goBack);
+        
+        Tyler1BagDescription.setBorder(BorderFactory.createLineBorder(Color.black));
+        return Tyler1BagDescription;
+    }
+
+    public JPanel Tyler1FunkoPop(ActionListener buttonListener) {
+    	JPanel Tyler1FunkoPop = new JPanel();
+    	Tyler1FunkoPop.setSize(300,300);
+    	JButton FunkoPop = new JButton();
+    	ImageIcon FunkoPopPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1_FunkoPop.jpg"));
+    	Image image = FunkoPopPic.getImage();
+    	Image scaled = image.getScaledInstance(200, 210, java.awt.Image.SCALE_SMOOTH);
+    	FunkoPopPic = new ImageIcon(scaled);
+    	FunkoPop.setIcon(FunkoPopPic);
+    	FunkoPop.addActionListener(buttonListener);
+    	
+    	JLabel Description = new JLabel("Tyler1 FunkoPop");
+    	JLabel Price = new JLabel("$18.00");
+    	Tyler1FunkoPop.setLayout(new BoxLayout(Tyler1FunkoPop, BoxLayout.Y_AXIS));
+    	Tyler1FunkoPop.add(FunkoPop);
+    	Tyler1FunkoPop.add(Description);
+    	Tyler1FunkoPop.add(Price);
+    	Tyler1FunkoPop.setBorder(BorderFactory.createLineBorder(Color.black));
+    	return Tyler1FunkoPop;
+    }
+    
+    public JPanel Tyler1FunkoPopDescription(ActionListener Back) {
+    	JPanel Tyler1FunkoPopDescription = new JPanel();
+    	Tyler1FunkoPopDescription.setSize(1000, 880);
+    	
+    	JLabel FunkoPop = new JLabel();
+    	ImageIcon FunkoPopPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1_FunkoPop.jpg"));
+        Image image = FunkoPopPic.getImage();
+        Image scaled = image.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH);
+        FunkoPopPic = new ImageIcon(scaled);
+        FunkoPop.setIcon(FunkoPopPic);
+        
+        JLabel ProductName = new JLabel("Tyler1 FunkoPop");
+        JLabel ProductSize = new JLabel("Size: Alpha sized");
+        JLabel P1 = new JLabel("Bobble");
+        JLabel P2 = new JLabel("Plastic");
+        JLabel P3 = new JLabel("Lead-free paint");
+        JLabel Price = new JLabel("$18.00");
+        JButton goBack = new JButton("Go Back");
+        goBack.addActionListener(Back);
+        
+        Tyler1FunkoPopDescription.setLayout(new BoxLayout(Tyler1FunkoPopDescription,BoxLayout.Y_AXIS));
+        Tyler1FunkoPopDescription.add(ProductName);
+        Tyler1FunkoPopDescription.add(FunkoPop);
+        Tyler1FunkoPopDescription.add(ProductSize);
+        Tyler1FunkoPopDescription.add(P1);
+        Tyler1FunkoPopDescription.add(P2);
+        Tyler1FunkoPopDescription.add(P3);
+        Tyler1FunkoPopDescription.add(Price);
+        Tyler1FunkoPopDescription.add(goBack);
+        
+        Tyler1FunkoPopDescription.setBorder(BorderFactory.createLineBorder(Color.black));
+        return Tyler1FunkoPopDescription;
+    }
+    
+
     /*
     public JPanel general(ActionListener Back) {
     	Consumer[] arr = t.Consumerdata();
@@ -215,6 +327,8 @@ public class Products {
         return Tyler1ShirtDescription;
     }
    */ 
+    
+    
     public JPanel getProduct(ActionListener ButtonListener, String picPath, String description, String price) {
     	JPanel product = new JPanel();
     	product.setSize(300, 300);
