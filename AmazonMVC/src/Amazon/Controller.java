@@ -39,7 +39,7 @@ public class Controller {
 
     class TodaysDealsListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.TodaysDeals());
         }
     }
 

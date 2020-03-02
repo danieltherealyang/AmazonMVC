@@ -59,4 +59,29 @@ public class ProductPanels {
         return AllProductsPanel;
     }
     
+    public JPanel TodaysDeals() {
+    	JPanel TodaysDealsPanel = new JPanel();
+    	TodaysDealsPanel.setSize(new Dimension(1000,880));
+        
+        CardLayout cardLayout = new CardLayout();
+        TodaysDealsPanel.setLayout(cardLayout);
+        
+        Products products = new Products();
+        JPanel mainCard = new JPanel(new GridLayout(0,3));
+        mainCard.add(products.Tyler1Shirt(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(TodaysDealsPanel, "shirt");
+        	}
+        }));
+        
+        JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(TodaysDealsPanel, "main");
+        	}
+        });
+        
+        TodaysDealsPanel.add(mainCard, "main");
+        TodaysDealsPanel.add(Tyler1ShirtDescription, "shirt");
+        return TodaysDealsPanel;
+    }
 }

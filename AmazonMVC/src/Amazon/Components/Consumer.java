@@ -34,7 +34,7 @@ public class Consumer
 	public static Consumer[] Consumerdata()
 	{
 		Consumer[] con= {
-				new Consumer("Title: TYLER1 Trademark Alpha Shirt","Description :highest quality TYLER1 brandend shirt, all sizes. Made in Wuhan, best bats","Tarriff:10", "Price:20")
+				new Consumer("Title: TYLER1 Trademark Alpha Shirt","Description :highest quality TYLER1 brandend shirt, all sizes. Made in Wuhan, best bats","Tarriff:10 for limited time cuz China", "Price:20")
 				
 				
 				
