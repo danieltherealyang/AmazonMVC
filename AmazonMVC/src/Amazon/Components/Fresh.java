@@ -2,13 +2,13 @@ package Amazon.Components;
 
 public class Fresh
 {
-	private String ftitle;
-	private String fdescript;
-	private int fprice;
-	private String fexp;
+	public String ftitle;
+	public String fdescript;
+	public String fprice;
+	public String fexp;
 	
 	
-	public Fresh(String title, String descript, int price,String exp)
+	public Fresh(String title, String descript, String price,String exp)
 	{
 		ftitle=title;
 		fdescript=descript;
@@ -16,7 +16,10 @@ public class Fresh
 		fexp=exp;
 	
 	}
-
+	
+	public Fresh() {
+		
+	}
 	
 	public String Key()
 	{
@@ -28,7 +31,7 @@ public class Fresh
 	public static Fresh[] Freshdata()
 	{
 		Fresh[] fo= {
-				new Fresh("Title Here","descipt here",1,"exp here"),
+				new Fresh("loltyler1 BLOODRUSH","Size 5lb, Lemon-Flavored, 24g Protein, 0g Sugar","$15","NEVER EXPIRES-NUCLEAR WARFARE PROOF"),
 				
 				
 				

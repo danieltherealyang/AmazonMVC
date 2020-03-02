@@ -34,11 +34,12 @@ public class Consumer
 	public static Consumer[] Consumerdata()
 	{
 		Consumer[] con= {
-				new Consumer("Title: TYLER1 Trademark Alpha Shirt","Description :highest quality TYLER1 brandend shirt, all sizes. Made in Wuhan, best bats","Tarriff:10 for limited time cuz China", "Price:20")
+				new Consumer("Title: TYLER1 Trademark Alpha Shirt","Description :highest quality TYLER1 brandend shirt, all sizes. Made in Wuhan, best bats","Tarriff:10% for limited time cuz China", "Price:20"),
+				
+				new Consumer("Title: TYLER1 TRADEMARK MUG","Description : Size Child, ALPHA condition,Crack-Proof, Ceramic material, Dishwasher safe", "Tarrif: 25%, From MEXICO","$19.99")
 				
 				
-				
-		};
+	};
 		
 		
 		

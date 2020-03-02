@@ -8,7 +8,9 @@ import java.awt.event.ActionListener;
 public class Products {
    
 	Consumer t = new Consumer();
-	
+	Fresh f = new Fresh();
+	Consumer[] arr = t.Consumerdata();
+	Fresh[] fod = f.Freshdata();
 	public JPanel Tyler1Shirt(ActionListener buttonListener) {
         JPanel Tyler1Shirt = new JPanel();
         Tyler1Shirt.setSize(300, 300);
@@ -20,8 +22,8 @@ public class Products {
         Shirt.setIcon(shirtPic);
         Shirt.addActionListener(buttonListener);
 
-        JLabel Description = new JLabel("TYLER1 Trademark Alpha Shirt");
-        JLabel Price = new JLabel("$20.00");
+        JLabel Description = new JLabel(arr[0].ctitle);
+        JLabel Price = new JLabel(arr[0].cprice);
         Tyler1Shirt.setLayout(new BoxLayout(Tyler1Shirt,BoxLayout.Y_AXIS));
         Tyler1Shirt.add(Shirt);
         Tyler1Shirt.add(Description);
@@ -31,7 +33,7 @@ public class Products {
     }
     
     public JPanel Tyler1ShirtDescription(ActionListener Back) {
-    	Consumer[] arr = t.Consumerdata();
+    	//Consumer[] arr = t.Consumerdata();
     	JPanel Tyler1ShirtDescription = new JPanel();
     	Tyler1ShirtDescription.setSize(1000, 880);
     	
@@ -76,8 +78,8 @@ public class Products {
         Mug.setIcon(mugPic);
         Mug.addActionListener(buttonListener);
 
-        JLabel Description = new JLabel("TYLER1 Trademark Mug");
-        JLabel Price = new JLabel("$10.00");
+        JLabel Description = new JLabel(arr[0].ctitle);
+        JLabel Price = new JLabel(arr[0].cprice);
         Tyler1Mug.setLayout(new BoxLayout(Tyler1Mug, BoxLayout.Y_AXIS));
         Tyler1Mug.add(Mug);
         Tyler1Mug.add(Description);
@@ -87,6 +89,7 @@ public class Products {
     }
     
     public JPanel Tyler1MugDescription(ActionListener Back) {
+    	
     	JPanel Tyler1MugDescription = new JPanel();
     	Tyler1MugDescription.setSize(1000, 880);
     	
@@ -97,24 +100,24 @@ public class Products {
         mugPic = new ImageIcon(scaled);
         Mug.setIcon(mugPic);
         
-        JLabel ProductName = new JLabel("TYLER1 Trademark Mug");
-        JLabel ProductSize = new JLabel("Size: Child Sized");
-        JLabel ProductCondition = new JLabel("Condition: Alpha");
-        JLabel P1 = new JLabel("Crack-Proof");
-        JLabel P2 = new JLabel("Ceramic");
-        JLabel P3 = new JLabel("Dishwasher Safe");
-        JLabel Price = new JLabel("$10.00");
+        JLabel ProductName = new JLabel(arr[0].ctitle);
+        //JLabel ProductSize = new JLabel("Size: Child Sized");
+        JLabel ProductCondition = new JLabel(arr[0].cdescript);
+        JLabel P1 = new JLabel(arr[0].ctarrif);
+        //JLabel P2 = new JLabel("Ceramic");
+        //JLabel P3 = new JLabel("Dishwasher Safe");
+        JLabel Price = new JLabel(arr[0].cprice);
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
         
         Tyler1MugDescription.setLayout(new BoxLayout(Tyler1MugDescription,BoxLayout.Y_AXIS));
         Tyler1MugDescription.add(ProductName);
         Tyler1MugDescription.add(Mug);
-        Tyler1MugDescription.add(ProductSize);
+        //Tyler1MugDescription.add(ProductSize);
         Tyler1MugDescription.add(ProductCondition);
-        Tyler1MugDescription.add(P1);
-        Tyler1MugDescription.add(P2);
-        Tyler1MugDescription.add(P3);
+       // Tyler1MugDescription.add(P1);
+        //Tyler1MugDescription.add(P2);
+       // Tyler1MugDescription.add(P3);
         Tyler1MugDescription.add(Price);
         Tyler1MugDescription.add(goBack);
         
@@ -133,8 +136,8 @@ public class Products {
     	BloodRush.setIcon(bloodRushPic);
     	BloodRush.addActionListener(buttonListener);
     	
-    	JLabel Description = new JLabel("loltyler1 BLOODRUSH");
-    	JLabel Price = new JLabel("$15.00");
+    	JLabel Description = new JLabel(arr[0].ctitle);
+    	JLabel Price = new JLabel(arr[0].cprice);
     	Tyler1BloodRush.setLayout(new BoxLayout(Tyler1BloodRush, BoxLayout.Y_AXIS));
     	Tyler1BloodRush.add(BloodRush);
     	Tyler1BloodRush.add(Description);
@@ -154,12 +157,12 @@ public class Products {
         bloodRushPic = new ImageIcon(scaled);
         BloodRush.setIcon(bloodRushPic);
         
-        JLabel ProductName = new JLabel("loltyler1 BLOODRUSH");
-        JLabel ProductSize = new JLabel("Size: 5 lb");
-        JLabel P1 = new JLabel("Lemon-Flavored");
-        JLabel P2 = new JLabel("24g Protein");
-        JLabel P3 = new JLabel("0g Sugar");
-        JLabel Price = new JLabel("$15.00");
+        JLabel ProductName = new JLabel(fod[0].ftitle);
+        JLabel ProductSize = new JLabel(fod[0].fdescript);
+        JLabel P1 = new JLabel(fod[0].fexp);
+        //JLabel P2 = new JLabel(fod[0].f);
+       // JLabel P3 = new JLabel("0g Sugar");
+        JLabel Price = new JLabel(fod[0].fprice);
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
         
@@ -168,8 +171,8 @@ public class Products {
         Tyler1BloodRushDescription.add(BloodRush);
         Tyler1BloodRushDescription.add(ProductSize);
         Tyler1BloodRushDescription.add(P1);
-        Tyler1BloodRushDescription.add(P2);
-        Tyler1BloodRushDescription.add(P3);
+       // Tyler1BloodRushDescription.add(P2);
+       // Tyler1BloodRushDescription.add(P3);
         Tyler1BloodRushDescription.add(Price);
         Tyler1BloodRushDescription.add(goBack);
         
