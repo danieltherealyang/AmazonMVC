@@ -40,12 +40,6 @@ public class Consumer
 				
 		};
 		
-		
-		
-		
-		
-		
-		
 		return con;
 	
 	}
