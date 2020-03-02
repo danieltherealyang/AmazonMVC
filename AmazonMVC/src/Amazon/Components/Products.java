@@ -78,8 +78,8 @@ public class Products {
         Mug.setIcon(mugPic);
         Mug.addActionListener(buttonListener);
 
-        JLabel Description = new JLabel(arr[0].ctitle);
-        JLabel Price = new JLabel(arr[0].cprice);
+        JLabel Description = new JLabel(arr[1].ctitle);
+        JLabel Price = new JLabel(arr[1].cprice);
         Tyler1Mug.setLayout(new BoxLayout(Tyler1Mug, BoxLayout.Y_AXIS));
         Tyler1Mug.add(Mug);
         Tyler1Mug.add(Description);
@@ -100,13 +100,13 @@ public class Products {
         mugPic = new ImageIcon(scaled);
         Mug.setIcon(mugPic);
         
-        JLabel ProductName = new JLabel(arr[0].ctitle);
+        JLabel ProductName = new JLabel(arr[1].ctitle);
         //JLabel ProductSize = new JLabel("Size: Child Sized");
-        JLabel ProductCondition = new JLabel(arr[0].cdescript);
-        JLabel P1 = new JLabel(arr[0].ctarrif);
+        JLabel ProductCondition = new JLabel(arr[1].cdescript);
+        JLabel P1 = new JLabel(arr[1].ctarrif);
         //JLabel P2 = new JLabel("Ceramic");
         //JLabel P3 = new JLabel("Dishwasher Safe");
-        JLabel Price = new JLabel(arr[0].cprice);
+        JLabel Price = new JLabel(arr[1].cprice);
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
         
@@ -115,7 +115,7 @@ public class Products {
         Tyler1MugDescription.add(Mug);
         //Tyler1MugDescription.add(ProductSize);
         Tyler1MugDescription.add(ProductCondition);
-       // Tyler1MugDescription.add(P1);
+        Tyler1MugDescription.add(P1);
         //Tyler1MugDescription.add(P2);
        // Tyler1MugDescription.add(P3);
         Tyler1MugDescription.add(Price);
@@ -136,8 +136,8 @@ public class Products {
     	BloodRush.setIcon(bloodRushPic);
     	BloodRush.addActionListener(buttonListener);
     	
-    	JLabel Description = new JLabel(arr[0].ctitle);
-    	JLabel Price = new JLabel(arr[0].cprice);
+    	JLabel Description = new JLabel(fod[0].ftitle);
+    	JLabel Price = new JLabel(fod[0].fprice);
     	Tyler1BloodRush.setLayout(new BoxLayout(Tyler1BloodRush, BoxLayout.Y_AXIS));
     	Tyler1BloodRush.add(BloodRush);
     	Tyler1BloodRush.add(Description);

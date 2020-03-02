@@ -31,7 +31,7 @@ public class Fresh
 	public static Fresh[] Freshdata()
 	{
 		Fresh[] fo= {
-				new Fresh("loltyler1 BLOODRUSH","Size 5lb, Lemon-Flavored, 24g Protein, 0g Sugar","$15","NEVER EXPIRES-NUCLEAR WARFARE PROOF"),
+				new Fresh("Title: loltyler1 BLOODRUSH","Description: Size 5lb, Lemon-Flavored, 24g Protein, 0g Sugar","Price: $15","Exp: NEVER EXPIRES-NUCLEAR WARFARE PROOF"),
 				
 				
 				
