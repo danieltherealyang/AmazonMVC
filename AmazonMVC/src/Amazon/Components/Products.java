@@ -271,7 +271,7 @@ public class Products {
         JLabel ProductSize = new JLabel("Size: Alpha sized");
         JLabel P1 = new JLabel("Bobble");
         JLabel P2 = new JLabel("Plastic");
-        JLabel P3 = new JLabel("Lead-free paint");
+        JLabel P3 = new JLabel("Paint has lead to make you more like Tyler1");
         JLabel Price = new JLabel("$18.00");
         JButton goBack = new JButton("Go Back");
         goBack.addActionListener(Back);
