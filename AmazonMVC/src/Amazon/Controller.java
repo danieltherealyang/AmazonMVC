@@ -45,7 +45,7 @@ public class Controller {
 
     class BestSellersListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.BestSellers());
         }
     }
 
