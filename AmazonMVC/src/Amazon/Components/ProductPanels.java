@@ -128,7 +128,19 @@ public class ProductPanels {
         	}
         }));
         
+        mainCard.add(products.Tyler1FunkoPop(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(BestSellersPanel, "funkopop");
+        	}
+        }));
+        
         JPanel Tyler1MugDescription = products.Tyler1MugDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(BestSellersPanel, "main");
+        	}
+        });
+        
+        JPanel Tyler1FunkoPopDescription = products.Tyler1FunkoPopDescription(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		cardLayout.show(BestSellersPanel, "main");
         	}
@@ -136,6 +148,7 @@ public class ProductPanels {
         
         BestSellersPanel.add(mainCard, "main");
         BestSellersPanel.add(Tyler1MugDescription, "shirt");
+        BestSellersPanel.add(Tyler1FunkoPopDescription, "funkopop");
         return BestSellersPanel;
     }
 }
