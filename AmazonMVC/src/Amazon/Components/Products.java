@@ -145,7 +145,7 @@ public class Products {
     	Tyler1BloodRush.setBorder(BorderFactory.createLineBorder(Color.black));
     	return Tyler1BloodRush;
     }
-    
+    //
     public JPanel Tyler1BloodRushDescription(ActionListener Back) {
     	JPanel Tyler1BloodRushDescription = new JPanel();
     	Tyler1BloodRushDescription.setSize(1000, 880);
