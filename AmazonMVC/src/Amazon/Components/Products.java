@@ -203,7 +203,7 @@ public class Products {
     	Tyler1FunkoPopDescription.setSize(1000, 880);
     	
     	JLabel FunkoPop = new JLabel();
-    	ImageIcon FunkoPopPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1_Bloodrush.jpg"));
+    	ImageIcon FunkoPopPic = new ImageIcon(Products.class.getResource("/Amazon/Components/products/Tyler1_FunkoPop.jpg"));
         Image image = FunkoPopPic.getImage();
         Image scaled = image.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH);
         FunkoPopPic = new ImageIcon(scaled);
