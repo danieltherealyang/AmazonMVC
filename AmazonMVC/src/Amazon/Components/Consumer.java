@@ -36,8 +36,8 @@ public class Consumer
 		Consumer[] con= {
 				new Consumer("Title: TYLER1 Trademark Alpha Shirt","Description :highest quality TYLER1 brandend shirt, all sizes. Made in Wuhan, best bats","Tariff:10% for limited time cuz China", "Price:$20"),
 				
-				new Consumer("Title: TYLER1 TRADEMARK MUG","Description : Size Child, ALPHA condition,Crack-Proof, Ceramic material, Dishwasher safe", "Tariff: 25%, From MEXICO in Sinola","$9.99")
-				
+				new Consumer("Title: TYLER1 TRADEMARK MUG","Description : Size Child, ALPHA condition,Crack-Proof, Ceramic material, Dishwasher safe", "Tariff: 25%, From MEXICO in Sinola","$9.99"),
+				new Consumer("Title: Tyler1 FunkoPop", "Description: Size: Alpha Sized, Bobble, Plastic from the bottles that kill sea turtles", "Tarrif: From Europe, VERY large Tarrif 50%", "Price: $18.99")
 				
 	};
 		

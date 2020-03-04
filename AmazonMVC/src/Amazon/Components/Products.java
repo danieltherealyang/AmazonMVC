@@ -212,8 +212,8 @@ public class Products {
         BagPic = new ImageIcon(scaled);
         Bag.setIcon(BagPic);
         
-        JLabel ProductName = new JLabel("loltyler1 Bag");
-        JLabel ProductSize = new JLabel("Size: Medium");
+        JLabel ProductName = new JLabel(arr[2].ctitle);
+        JLabel ProductSize = new JLabel(arr[2].cprice);
         JLabel P1 = new JLabel("Holds items");
         JLabel P2 = new JLabel("Stylish and affordable");
         JLabel P3 = new JLabel("Comfortable to wear");
