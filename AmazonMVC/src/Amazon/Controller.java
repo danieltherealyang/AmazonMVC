@@ -61,15 +61,16 @@ public class Controller {
         }
     }
 
+    // Added functionality for Registry
     class RegistryListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.Registry());
         }
     }
 
     class NewReleasesListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.NewReleases());
         }
     }
 

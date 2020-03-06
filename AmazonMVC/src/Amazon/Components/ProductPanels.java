@@ -86,7 +86,7 @@ public class ProductPanels {
         cardLayout.show(AllProductsPanel, "main");
         return AllProductsPanel;
        }
-    
+    //Functionality for Todays deals
     public JPanel TodaysDeals() {
     	JPanel TodaysDealsPanel = new JPanel();
     	TodaysDealsPanel.setSize(new Dimension(1000,880));
@@ -112,7 +112,7 @@ public class ProductPanels {
         TodaysDealsPanel.add(Tyler1ShirtDescription, "shirt");
         return TodaysDealsPanel;
     }
-    
+    //Functionality for Best Sellers
     public JPanel BestSellers() {
     	JPanel BestSellersPanel = new JPanel();
     	BestSellersPanel.setSize(new Dimension(1000,880));
@@ -150,5 +150,59 @@ public class ProductPanels {
         BestSellersPanel.add(Tyler1MugDescription, "shirt");
         BestSellersPanel.add(Tyler1FunkoPopDescription, "funkopop");
         return BestSellersPanel;
+    }
+    
+    // Added functionality for Registry
+    public JPanel Registry() {
+    	JPanel Registry = new JPanel();
+    	Registry.setSize(new Dimension(1000,880));
+        
+        CardLayout cardLayout = new CardLayout();
+        Registry.setLayout(cardLayout);
+        System.out.println("Entered here 1");
+        Products products = new Products();
+        JPanel mainCard = new JPanel(new GridLayout(0,3));
+        mainCard.add(products.Tyler1Shirt(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(Registry, "shirt");
+        	}
+        }));
+        
+        JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(Registry, "main");
+        	}
+        });
+        
+        Registry.add(mainCard, "main");
+        Registry.add(Tyler1ShirtDescription, "shirt");
+        return Registry;
+    }
+    
+    // Added functionality for New Releases
+    public JPanel NewReleases() {
+    	JPanel NewReleases = new JPanel();
+    	NewReleases.setSize(new Dimension(1000,880));
+        
+        CardLayout cardLayout = new CardLayout();
+        NewReleases.setLayout(cardLayout);
+        System.out.println("Entered here 1");
+        Products products = new Products();
+        JPanel mainCard = new JPanel(new GridLayout(0,3));
+        mainCard.add(products.Tyler1Shirt(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(NewReleases, "mug");
+        	}
+        }));
+        
+        JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(NewReleases, "main");
+        	}
+        });
+        
+        NewReleases.add(mainCard, "main");
+        NewReleases.add(Tyler1ShirtDescription, "shirt");
+        return NewReleases;
     }
 }
