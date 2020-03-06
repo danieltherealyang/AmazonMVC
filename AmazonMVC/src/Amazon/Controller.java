@@ -57,7 +57,7 @@ public class Controller {
 //Customer Service Listener
     class CustomerServiceListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.CustomerService());
         }
     }
     

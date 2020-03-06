@@ -343,6 +343,27 @@ public JPanel FindaGift() {
     FindaGift.add(Tyler1ShirtDescription, "shirt");
     return FindaGift;
 }
+
+//Added functionality for Find a Gift
+
+public JPanel CustomerService() {
+	JPanel CustomerService = new JPanel();
+	CustomerService.setSize(new Dimension(1000,880));
+  
+  CardLayout cardLayout = new CardLayout();
+  CustomerService.setLayout(cardLayout);
+  //System.out.println("Entered here 1");
+  Products products = new Products();
+  JPanel mainCard = new JPanel(new GridLayout(0,3));
+   
+  JLabel numbr = new JLabel ("If you have an issue, please contact us at cs@amazon.com or at Fox's house.");
+  numbr.setVisible(true);
+  numbr.setText("Please call us at 999-999-9991");
+  mainCard.add(numbr);
+  
+  return CustomerService;
+}
+
 }
 
 
