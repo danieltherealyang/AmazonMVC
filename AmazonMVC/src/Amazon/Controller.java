@@ -54,7 +54,7 @@ public class Controller {
         	m_view.showScrollPane(myPanels.FindaGift());
         }
     }
-
+//Customer Service Listener
     class CustomerServiceListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
 
@@ -65,7 +65,7 @@ public class Controller {
     // Added functionality for Registry
     class RegistryListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-        	m_view.showScrollPane(myPanels.Registry());
+        	//m_view.showScrollPane(myPanels.Registry());
         }
     }
 //Added functionality for New Releases

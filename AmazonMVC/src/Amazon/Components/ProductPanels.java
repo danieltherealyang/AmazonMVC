@@ -161,8 +161,8 @@ public class ProductPanels {
         BestSellersPanel.add(Tyler1FunkoPopDescription, "funkopop");
         return BestSellersPanel;
     }
-    
-    // Added functionality for Registry
+  /*  
+    // Added functionality for Registry, product page instead of other
     public JPanel Registry() {
     	JPanel Registry = new JPanel();
     	Registry.setSize(new Dimension(1000,880));
@@ -188,7 +188,7 @@ public class ProductPanels {
         Registry.add(Tyler1ShirtDescription, "shirt");
         return Registry;
     }
-    
+    */
     // Added functionality for New Releases
     public JPanel NewReleases() {
     	JPanel NewReleases = new JPanel();
