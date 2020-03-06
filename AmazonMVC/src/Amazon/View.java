@@ -20,7 +20,7 @@ public class View extends JPanel {
 	private JButton CustomerService = myButtons.CustomerService();
 	private JButton Registry = myButtons.Registry();
 	private JButton NewReleases = myButtons.NewReleases();
-	private JButton Books = myButtons.Books();
+	private JButton MyCart = myButtons.MyCart();
 	private JButton BestSellers = myButtons.BestSellers();
 	private JTextField SearchBar = new JTextField(65);
 	private JButton SearchButton = new JButton();
@@ -72,7 +72,7 @@ public class View extends JPanel {
 		panel.add(CustomerService);
 		panel.add(Registry);
 		panel.add(NewReleases);
-		panel.add(Books);
+		panel.add(MyCart);
 		panel.add(scrollPane, BorderLayout.SOUTH);
 
 		m_frame.getContentPane().setPreferredSize(new Dimension(1000,1000));
@@ -123,7 +123,7 @@ public class View extends JPanel {
 		NewReleases.addActionListener(nrListener);
 	}
 
-	void addBooksListener(ActionListener bListener) {
-		Books.addActionListener(bListener);
+	void addMyCartListener(ActionListener bListener) {
+		MyCart.addActionListener(bListener);
 	}
 }

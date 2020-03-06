@@ -22,7 +22,7 @@ public class Controller {
         view.addFindaGiftListener(new FindaGiftListener());
         view.addRegistryListener(new RegistryListener());
         view.addNewReleasesListener(new NewReleasesListener());
-        view.addBooksListener(new BooksListener());
+        view.addMyCartListener(new MyCartListener());
     }
 
     class LogoListener implements ActionListener {
@@ -73,9 +73,9 @@ public class Controller {
         }
     }
 
-    class BooksListener implements ActionListener {
+    class MyCartListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.MyCart());
         }
     }
 }
