@@ -344,7 +344,7 @@ public JPanel FindaGift() {
     return FindaGift;
 }
 
-//Added functionality for Find a Gift
+//Added functionality for Customer Service
 
 public JPanel CustomerService() {
 	JPanel CustomerService = new JPanel();
