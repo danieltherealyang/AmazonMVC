@@ -16,6 +16,7 @@ public class Buttons {
 
     public JButton TodaysDeals() {
         JButton TodaysDeals = new JButton("Today's Deals");
+        TodaysDeals.setToolTipText("See the top deals on Amazon products today");
         TodaysDeals.setOpaque(true);
         TodaysDeals.setBorderPainted(false);
         TodaysDeals.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -34,6 +35,7 @@ public class Buttons {
 
     public JButton FindaGift() {
         JButton FindaGift = new JButton("Find a Gift");
+        FindaGift.setToolTipText("Top gifts");
         FindaGift.setOpaque(true);
         FindaGift.setBorderPainted(false);
         FindaGift.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -52,6 +54,7 @@ public class Buttons {
 
     public JButton CustomerService() {
         JButton CustomerService = new JButton("Customer Service");
+        CustomerService.setToolTipText("If you have any issues, please email us at cs@amazon.com");
         CustomerService.setOpaque(true);
         CustomerService.setBorderPainted(false);
         CustomerService.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,6 +91,7 @@ public class Buttons {
 
     public JButton NewReleases() {
         JButton NewReleases = new JButton("New Releases");
+        NewReleases.setToolTipText("Top New releases from Amazon.com");
         NewReleases.setOpaque(true);
         NewReleases.setBorderPainted(false);
         NewReleases.addMouseListener(new java.awt.event.MouseAdapter() {
