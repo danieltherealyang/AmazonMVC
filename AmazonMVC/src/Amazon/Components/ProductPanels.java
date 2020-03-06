@@ -161,6 +161,7 @@ public class ProductPanels {
         BestSellersPanel.add(Tyler1FunkoPopDescription, "funkopop");
         return BestSellersPanel;
     }
+
   /*  
     // Added functionality for Registry, product page instead of other
     public JPanel Registry() {
@@ -254,7 +255,48 @@ public JPanel Books() {
     Books.add(Tyler1ShirtDescription, "mugs");
     return Books;
 }
-
+    
+    public JPanel MyCart() {
+    	JPanel MyCartPanel = new JPanel();
+    	MyCartPanel.setSize(new Dimension(1000,880));
+    	
+    	CardLayout cardLayout = new CardLayout();
+    	MyCartPanel.setLayout(cardLayout);
+    	
+    	Products cart = new Products();
+    	
+    	JPanel mainCard = new JPanel(new GridLayout(0,3));
+    	
+    	mainCard.add(cart.Tyler1Mug(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(MyCartPanel, "mug");
+        	}
+        }));
+    	
+    	mainCard.add(cart.Tyler1FunkoPop(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(MyCartPanel, "funkopop");
+        	}
+        }));
+    	
+    	JPanel Tyler1MugDescription = cart.Tyler1MugDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(MyCartPanel, "main");
+        	}
+        });
+    	
+    	JPanel Tyler1FunkoPopDescription = cart.Tyler1FunkoPopDescription(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(MyCartPanel, "main");
+        	}
+        });
+    	
+    	MyCartPanel.add(mainCard, "main");
+    	MyCartPanel.add(Tyler1MugDescription, "mug");
+    	MyCartPanel.add(Tyler1FunkoPopDescription, "funkopop");
+    	
+    	return MyCartPanel;
+    }
 
 //Added functionality for Find a Gift
 

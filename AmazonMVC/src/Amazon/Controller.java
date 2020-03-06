@@ -22,7 +22,7 @@ public class Controller {
         view.addFindaGiftListener(new FindaGiftListener());
         view.addRegistryListener(new RegistryListener());
         view.addNewReleasesListener(new NewReleasesListener());
-        view.addBooksListener(new BooksListener());
+        view.addMyCartListener(new MyCartListener());
     }
 
     class LogoListener implements ActionListener {
@@ -74,11 +74,25 @@ public class Controller {
         	m_view.showScrollPane(myPanels.NewReleases());
         }
     }
+
     
 //Books functionality after click
     class BooksListener implements ActionListener {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+    }
+
+    class MyCartListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+
         	m_view.showScrollPane(myPanels.Books());
+
+        	m_view.showScrollPane(myPanels.MyCart());
+
         }
     }
   

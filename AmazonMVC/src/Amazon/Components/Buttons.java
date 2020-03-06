@@ -108,22 +108,22 @@ public class Buttons {
         return NewReleases;
     }
 
-    public JButton Books() {
-        JButton Books = new JButton("Books");
-        Books.setOpaque(true);
-        Books.setBorderPainted(false);
-        Books.addMouseListener(new java.awt.event.MouseAdapter() {
+    public JButton MyCart() {
+        JButton Cart = new JButton("Cart");
+        Cart.setOpaque(true);
+        Cart.setBorderPainted(false);
+        Cart.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Books.setBorderPainted(true);
+            	Cart.setBorderPainted(true);
             }
 
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                Books.setBorderPainted(false);
+            	Cart.setBorderPainted(false);
             }
         });
-        Books.setBackground(new Color(35, 47, 63));
-        Books.setForeground(Color.white);
-        return Books;
+        Cart.setBackground(new Color(35, 47, 63));
+        Cart.setForeground(Color.white);
+        return Cart;
     }
 
     public JButton BestSellers() {
