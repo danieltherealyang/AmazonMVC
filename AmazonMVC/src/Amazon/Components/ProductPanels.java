@@ -364,6 +364,49 @@ public JPanel CustomerService() {
   return CustomerService;
 }
 
+public JPanel RegistryPanel() {
+	JPanel MyCartPanel = new JPanel();
+	MyCartPanel.setSize(new Dimension(1000,880));
+	
+	CardLayout cardLayout = new CardLayout();
+	MyCartPanel.setLayout(cardLayout);
+	
+	Products cart = new Products();
+	
+	JPanel mainCard = new JPanel(new GridLayout(0,3));
+	
+	mainCard.add(ProductRegistry.productRegistry.get(0).getProduct(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(MyCartPanel, "mug");
+    	}
+    }));
+	
+	mainCard.add(ProductRegistry.productRegistry.get(0).getProduct(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(MyCartPanel, "funkopop");
+    	}
+    }));
+	
+	JPanel Tyler1MugDescription = ProductRegistry.productRegistry.get(0).getProduct(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(MyCartPanel, "main");
+    	}
+    });
+	
+	JPanel GeneralDescription = ProductRegistry.productRegistry.get(0).getProduct(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(MyCartPanel, "main");
+    	}
+    });
+	
+	MyCartPanel.add(mainCard, "main");
+	MyCartPanel.add(Tyler1MugDescription, "mug");
+	MyCartPanel.add(GeneralDescription, "funkopop");
+	
+	return MyCartPanel;
+	
+}
+
 }
 
 
