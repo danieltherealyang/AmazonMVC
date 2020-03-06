@@ -6,7 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ProductPanels {
-    public JPanel AllProducts() {
+    protected static final Container NewReleasesPanel = null;
+	protected static final Container TodaysDeals = null;
+
+	//List of all products to appear on home page
+	public JPanel AllProducts() {
         JPanel AllProductsPanel = new JPanel();
         AllProductsPanel.setSize(new Dimension(1000,880));
         
@@ -102,6 +106,12 @@ public class ProductPanels {
         	}
         }));
         
+        mainCard.add(products.Tyler1BloodRush(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(TodaysDeals, "bloodrush");
+        	}
+        }));
+        
         JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		cardLayout.show(TodaysDealsPanel, "main");
@@ -186,12 +196,18 @@ public class ProductPanels {
         
         CardLayout cardLayout = new CardLayout();
         NewReleases.setLayout(cardLayout);
-        System.out.println("Entered here 1");
+        //System.out.println("Entered here 1");
         Products products = new Products();
         JPanel mainCard = new JPanel(new GridLayout(0,3));
         mainCard.add(products.Tyler1Shirt(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		cardLayout.show(NewReleases, "mug");
+        	}
+        }));
+        
+        mainCard.add(products.Tyler1FunkoPop(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(NewReleasesPanel, "funkopop");
         	}
         }));
         
@@ -201,8 +217,92 @@ public class ProductPanels {
         	}
         });
         
+        mainCard.add(products.Tyler1BloodRush(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		cardLayout.show(NewReleasesPanel, "bloodrush");
+        	}
+        }));
+        
         NewReleases.add(mainCard, "main");
         NewReleases.add(Tyler1ShirtDescription, "shirt");
         return NewReleases;
     }
+
+//Added functionality for books
+public JPanel Books() {
+	JPanel Books = new JPanel();
+	Books.setSize(new Dimension(1000,880));
+    
+    CardLayout cardLayout = new CardLayout();
+    Books.setLayout(cardLayout);
+    //System.out.println("Entered here 1");
+    Products products = new Products();
+    JPanel mainCard = new JPanel(new GridLayout(0,3));
+    mainCard.add(products.Tyler1Shirt(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(Books, "shirt");
+    	}
+    }));
+    
+    JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(Books, "main");
+    	}
+    });
+    
+    Books.add(mainCard, "main");
+    Books.add(Tyler1ShirtDescription, "mugs");
+    return Books;
 }
+
+
+//Added functionality for Find a Gift
+
+public JPanel FindaGift() {
+	JPanel FindaGift = new JPanel();
+	FindaGift.setSize(new Dimension(1000,880));
+    
+    CardLayout cardLayout = new CardLayout();
+    FindaGift.setLayout(cardLayout);
+    //System.out.println("Entered here 1");
+    Products products = new Products();
+    JPanel mainCard = new JPanel(new GridLayout(0,3));
+    mainCard.add(products.Tyler1Shirt(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(FindaGift, "mug");
+    	}
+    }));
+    
+    mainCard.add(products.Tyler1Bag(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(FindaGift, "bag");
+    	}
+    }));
+    
+    mainCard.add(products.Tyler1FunkoPop(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(NewReleasesPanel, "funkopop");
+    	}
+    }));
+    
+    JPanel Tyler1ShirtDescription = products.Tyler1ShirtDescription(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(FindaGift, "main");
+    	}
+    });
+    
+    mainCard.add(products.Tyler1BloodRush(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		cardLayout.show(FindaGift, "bloodrush");
+    	}
+    }));
+    
+    FindaGift.add(mainCard, "main");
+    FindaGift.add(Tyler1ShirtDescription, "shirt");
+    return FindaGift;
+}
+}
+
+
+
+

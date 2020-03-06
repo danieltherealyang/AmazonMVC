@@ -48,10 +48,10 @@ public class Controller {
         	m_view.showScrollPane(myPanels.BestSellers());
         }
     }
-
+//Find a gift listener
     class FindaGiftListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.FindaGift());
         }
     }
 
@@ -60,6 +60,7 @@ public class Controller {
 
         }
     }
+    
 
     // Added functionality for Registry
     class RegistryListener implements ActionListener {
@@ -67,16 +68,18 @@ public class Controller {
         	m_view.showScrollPane(myPanels.Registry());
         }
     }
-
+//Added functionality for New Releases
     class NewReleasesListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
         	m_view.showScrollPane(myPanels.NewReleases());
         }
     }
-
+    
+//Books functionality after click
     class BooksListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+        	m_view.showScrollPane(myPanels.Books());
         }
     }
+  
 }
